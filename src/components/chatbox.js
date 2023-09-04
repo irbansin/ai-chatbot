@@ -3,6 +3,21 @@ import { faTimes, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import "./chatbox.scss";
 
 export default function Chatbox() {
+  let messageList = [
+    {
+      question: "Can you please tell me my name?",
+      answer: "Your name is Eva",
+    },
+    {
+      question: "What is my Role?",
+      answer: "Your Role is SDE 3",
+    },
+    {
+      question: "Who is my Manager?",
+      answer: "Jagadish Chandra Bose",
+    },
+  ];
+
   return (
     <div className="chatbox">
       <div className="chatbox-header">
@@ -22,25 +37,56 @@ export default function Chatbox() {
       {/*Introductory Message*/}.
       <div className="chatbox-body">
         <div className="chatbox-body-reply-message">
-          <div className="chatbox-body-message-avatar"></div>
+          <div className="chatbox-body-message-avatar">
+            <div className="bot"></div>
+          </div>
           <p className=".chatbox-body-reply-message-content-text">
             Hi, I'm Pam. How can I help you?
           </p>
         </div>
         {/*---------------Loop Starts-----------------*/}.
-        <div className="chatbox-body-messages">
+        {messageList.map((message, index) => {
+          return (
+            <div key={index}>
+              <div className="chatbox-body-messages">
+                <div className="chatbox-body-question-message">
+                  <div className="chatbox-body-message-avatar">
+                    {" "}
+                    <div className="user"></div>
+                  </div>
+                  <p>{message.question}</p>
+                </div>
+                <div className="chatbox-body-reply-message">
+                  <div className="chatbox-body-message-avatar">
+                    <div className="bot"></div>
+                  </div>
+                  <p className=".chatbox-body-reply-message-content-text">
+                    {message.answer}
+                  </p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+        {/* <div className="chatbox-body-messages">
           <div className="chatbox-body-question-message">
-            <div className="chatbox-body-message-avatar"></div>
+            <div className="chatbox-body-message-avatar">
+              {" "}
+              <div className="user"></div>
+            </div>
             <p>Can you please tell me my name?</p>
           </div>
           <div className="chatbox-body-reply-message">
-            <div className="chatbox-body-message-avatar"></div>
+            <div className="chatbox-body-message-avatar">
+              <div className="bot"></div>
+            </div>
             <p className=".chatbox-body-reply-message-content-text">
-              Your name is Anirban Sinha
+              Your name is Eva
             </p>
           </div>
-        </div>
-        <div className="chatbox-body-messages">
+        </div> */}
+        {/*---------------Loop Ends-----------------*/}.
+        {/* <div className="chatbox-body-messages">
           <div className="chatbox-body-question-message">
             <div className="chatbox-body-message-avatar"></div>
             <p>What is my Role?</p>
@@ -63,8 +109,7 @@ export default function Chatbox() {
               Jagadish Chandra Bose
             </p>
           </div>
-        </div>
-        {/*---------------Loop Ends-----------------*/}.
+        </div> */}
         <div className="chatbox-body-input">
           <input type="text" placeholder="Type your message here..." />
           <button>
