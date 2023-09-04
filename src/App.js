@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeadset } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import Chatbox from "./components/chatbox";
 
 function App() {
+  const [chatboxVisibility, setChatboxVisibility] = useState(false);
+
+  function toggleChatbox() {
+    setChatboxVisibility(!chatboxVisibility);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {chatboxVisibility ? <Chatbox></Chatbox> : null}
+      <button onClick={toggleChatbox} className="summon-pam bounce">
+        <FontAwesomeIcon icon={faHeadset} />
+      </button>
+    </>
   );
 }
 
