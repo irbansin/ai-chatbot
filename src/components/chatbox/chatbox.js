@@ -5,7 +5,7 @@ import ChatboxHeader from "./chatbox-header/chatbox-header";
 import ChatboxBody from "./chatbox-body/chatbox-body";
 import { useState } from "react";
 
-export default function Chatbox() {
+export default function Chatbox(props) {
   const [question, setQuestion] = useState("");
   const [messageList, setMessageList] = useState([
     {
@@ -32,7 +32,7 @@ export default function Chatbox() {
 
   return (
     <div className="chatbox">
-      <ChatboxHeader></ChatboxHeader>
+      <ChatboxHeader closeChatbox={props.closeChatbox}></ChatboxHeader>
       <ChatboxBody messageList={messageList}></ChatboxBody>
       <div className="chatbox-footer">
         <input

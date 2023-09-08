@@ -11,6 +11,10 @@ function App() {
     setChatboxVisibility(!chatboxVisibility);
   }
 
+  function closeChatbox() {
+    setChatboxVisibility(false);
+  }
+
   return (
     <div className="eChanakya-theme">
       <h1>Hello! Meet Chanakya</h1>
@@ -26,7 +30,9 @@ function App() {
       <h2 className="action-message">
         Click on the headset to summon Chanakya
       </h2>
-      {chatboxVisibility ? <Chatbox></Chatbox> : null}
+      {chatboxVisibility ? (
+        <Chatbox closeChatbox={closeChatbox}></Chatbox>
+      ) : null}
       <button onClick={toggleChatbox} className="summon-Chanakya bounce">
         <FontAwesomeIcon icon={faOm} />
       </button>

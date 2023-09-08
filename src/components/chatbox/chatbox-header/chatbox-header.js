@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import "./chatbox-header.scss";
 
-export default function ChatboxHeader() {
+export default function ChatboxHeader(props) {
   return (
     <div className="chatbox-header">
       <div className="chatbox-header-avatar">
@@ -15,7 +15,7 @@ export default function ChatboxHeader() {
       <div className="chatbox-header-text">
         <p>Chat with Chanakya</p>
       </div>
-      <div className="chatbox-header-close">
+      <div onClick={props.closeChatbox} className="chatbox-header-close">
         <FontAwesomeIcon icon={faTimes} />
       </div>
     </div>
