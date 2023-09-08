@@ -46,7 +46,7 @@ export default function Chatbox() {
             }
           }}
         />
-        <button value={question} onClick={sendText}>
+        <button onClick={sendText}>
           <FontAwesomeIcon icon={faPaperPlane} />
         </button>
       </div>

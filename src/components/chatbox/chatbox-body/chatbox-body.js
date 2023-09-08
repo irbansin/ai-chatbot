@@ -1,6 +1,17 @@
 import "./chatbox-body.scss";
+import React, { useEffect, useRef } from "react";
 
 export default function ChatboxBody(props) {
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [props.messageList]);
+
   return (
     <div className="chatbox-body">
       <div className="chatbox-body-reply-message">
@@ -8,7 +19,7 @@ export default function ChatboxBody(props) {
           <div className="bot"></div>
         </div>
         <p className=".chatbox-body-reply-message-content-text">
-          Hi, I'm Pam. How can I help you?
+          Hi, I'm Chanakya. How can I help you?
         </p>
       </div>
       {props.messageList.map((message, index) => {
@@ -34,6 +45,7 @@ export default function ChatboxBody(props) {
           </div>
         );
       })}
+      <div ref={messagesEndRef} />
     </div>
   );
 }
