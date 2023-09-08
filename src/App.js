@@ -1,6 +1,6 @@
 import "./App.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeadset, faOm } from "@fortawesome/free-solid-svg-icons";
+import { faOm } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Chatbox from "./components/chatbox/chatbox";
 
