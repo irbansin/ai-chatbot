@@ -1,0 +1,116 @@
+.chatbox-body {
+  padding: 2.5rem;
+  height: 50vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .chatbox-body-messages {
+    display: flex;
+    flex-direction: column;
+  }
+  .chatbox-body-message-avatar {
+    .bot {
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC5agYzc2iBtnuZCfnpXmVx61SRuJne7sFiA&usqp=CAU);
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+    }
+    .user {
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaogOAI7Ur1bKHyXn3RcCRLhV7Hd5fNn8CXG1lKaj7H_j0y1Ogid67e_3U_wViOIySRkY&usqp=CAU);
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+    }
+
+    margin: 0.5rem;
+  }
+  .chatbox-body-reply-message {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    background-color: #060606;
+    color: #fff;
+    text-align: left;
+    width: fit-content;
+    max-width: 70%;
+    border-radius: 10px;
+    padding: 0 10px;
+
+    // .chatbox-body-reply-message-content {
+    //   padding: 0 1rem;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   flex-direction: column;
+    //   .chatbox-body-reply-message-content-text {
+    //     font-size: 1.2rem;
+    //     font-weight: 600;
+    //     color: #fff;
+    //   }
+    //   .chatbox-body-reply-message-content-time {
+    //     font-size: 0.8rem;
+    //     color: #fff;
+    //   }
+    // }
+    // &::before {
+    //   content: " ";
+    //   position: relative;
+    //   width: 0;
+    //   height: 0;
+    //   right: 10px;
+    //   bottom: -24px;
+    //   border: 22px solid;
+    //   border-color: transparent transparent transparent #060606;
+    // }
+  }
+  .chatbox-body-question-message {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+    background-color: rgb(179, 216, 245);
+    color: black;
+    text-align: left;
+    width: fit-content;
+    max-width: 70%;
+    border-radius: 10px;
+    padding: 0 10px;
+    // &::after {
+    //   content: " ";
+    //   position: relative;
+    //   width: 0;
+    //   height: 0;
+    //   right: -10px;
+    //   bottom: -23px;
+    //   border: 22px solid;
+    //   border-color: transparent #060606 transparent transparent;
+    // }
+  }
+  .chatbox-body-prompt-tile {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 2px 10px;
+    background-color: rgb(179, 216, 245);
+    max-width: 50%;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 500;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+
+  .chatbox-body-reply-message-content-text {
+    word-break: break-word;
+    padding-left: 20px;
+    margin-top: 15px;
+  }
+}

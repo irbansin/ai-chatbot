@@ -1,0 +1,34 @@
+.chatbox-header {
+  background-color: #060606;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px 10px 0 0;
+  .chatbox-header-avatar {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    border-right: 1px solid #000;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chatbox-header-text {
+    font-size: large;
+  }
+  .chatbox-header-close {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    border-radius: 50%;
+    height: 40px;
+    width: 20px;
+    &:hover {
+      background-color: aquamarine;
+    }
+  }
+}
