@@ -15,18 +15,32 @@ function App() {
     setChatboxVisibility(false);
   }
 
+  function visitPitchdeck() {
+    window.open("https://view.storydoc.com/pjDDv0L9", "_blank");
+  }
+
   return (
     <div className="echanakya-theme">
       <h1>Hello! Meet Chanakya</h1>
       <br />
-      <h3 className="chanakyas-message">
+      <h2 className="chanakyas-message">
         Chanakya is your personal legal advisor. He can help you with all your
-        legal queries. Chanakya is available 24x7. You can use chanakya to learn
-        about your rights, get legal advice, find a lawyer, and more!
+        legal queries.
+      </h2>
+      <h3>
+        Chanakya is available 24x7. You can use chanakya to learn about your
+        rights, get legal advice, find a lawyer, and more!
       </h3>
+      <p>
+        We are currently in beta. Please bear with us if you encounter any bugs.
+        We are working really hard to democratise the legal system.
+      </p>
       <h2 className="action-message">
         Click on the headset to summon Chanakya
       </h2>
+      <button onClick={visitPitchdeck} className="visit-pitchdeck-button">
+        Pitch Deck
+      </button>
       {chatboxVisibility ? (
         <Chatbox
           closeChatbox={closeChatbox}

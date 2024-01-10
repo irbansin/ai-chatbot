@@ -17,6 +17,19 @@
   text-align: center;
   margin: 3rem;
 }
+.visit-pitchdeck-button {
+  background: #3498db;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: large;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 .action-message {
   text-align: center;
   margin: 3rem;
