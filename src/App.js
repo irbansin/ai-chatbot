@@ -20,12 +20,9 @@ function App() {
       <h1>Hello! Meet Chanakya</h1>
       <br />
       <h3 className="chanakyas-message">
-        Chanakya is your virttual AI assistant that solves all your HR queries.
-        Chanakya is your first level of support. Hereafter you don't need to
-        wate for the next Helpdesk Meeting or your leave queries. Chanakya is
-        just born. So please don't stress her too much. She is learning. She is
-        very good at it! Give her some time and you will never be confised with
-        companypolicies ever again
+        Chanakya is your personal legal advisor. He can help you with all your
+        legal queries. Chanakya is available 24x7. You can use chanakya to learn
+        about your rights, get legal advice, find a lawyer, and more!
       </h3>
       <h2 className="action-message">
         Click on the headset to summon Chanakya
